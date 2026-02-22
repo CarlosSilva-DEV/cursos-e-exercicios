@@ -1,0 +1,17 @@
+package services;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CalculationService<T> implements Comparable<T>{
+	// metodos
+	public T max(List<T> list) {
+		return Collections.max(list);
+	}
+
+	@Override
+	public int compareTo(T arg0) {
+		return 0;
+	}
+}

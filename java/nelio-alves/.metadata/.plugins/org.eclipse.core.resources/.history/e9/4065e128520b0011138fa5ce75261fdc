@@ -1,0 +1,29 @@
+package entities;
+
+public class PessoaFisica extends Pessoa {
+	private Double healthExpenses;
+	
+	// Construtor
+	public PessoaFisica() {
+	}
+
+	public PessoaFisica(String name, Double yearIncome, Double healthExpenses) {
+		super(name, yearIncome);
+		this.healthExpenses = healthExpenses;
+	}
+	
+	// getters e setters
+	public Double getHealthExpenses() {
+		return healthExpenses;
+	}
+	public void setHealthExpenses(Double healthExpenses) {
+		this.healthExpenses = healthExpenses;
+	}
+	
+	// metodos
+	@Override
+	public Double calcTaxes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

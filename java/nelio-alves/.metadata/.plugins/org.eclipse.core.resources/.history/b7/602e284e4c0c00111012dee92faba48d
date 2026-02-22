@@ -1,0 +1,41 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import model.entities.Contract;
+import model.entities.Installment;
+import model.services.ContractService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		Contract c = new Contract();
+		
+		System.out.println("Insert the contract data:");
+		System.out.print("Number: ");
+		c.setNumber(input.nextInt());
+		
+		System.out.print("Date (dd/MM/yyyy): ");
+		c.setDate(input.nextLine());
+		
+		System.out.print("Contract total value: $ ");
+		c.setTotalValue(input.nextDouble());
+		
+		System.out.print("Insert the number of installments: ");
+		int n = input.nextInt();
+		
+		ContractService service = new ContractService(null);
+		service.processContract(c, n);
+		
+		System.out.println("\n\nINSTALLMENTS:");
+		
+		for (Installment i : c.getInstallments()) {
+			System.out.printf("Installment #%d: ", i);
+		}
+		
+		input.close();
+	}
+}

@@ -1,0 +1,25 @@
+package problema2.application;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import problema2.entities.Product;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Map<Product, Integer> stock = new HashMap<>();
+		
+		Product p1 = new Product("TV", 900.00);
+		Product p2 = new Product("Notebook", 1200.00);
+		Product p3 = new Product("Tablet", 400.00);
+		
+		stock.put(p1, 10000);
+		stock.put(p1, 20000);
+		stock.put(p1, 15000);
+		
+		Product ps = new Product("TV", 900.00);
+		
+		System.out.println("contains 'ps' key? " + stock.containsKey(ps));
+	}
+}

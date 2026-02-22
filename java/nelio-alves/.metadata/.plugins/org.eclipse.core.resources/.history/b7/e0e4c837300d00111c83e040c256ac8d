@@ -1,0 +1,17 @@
+package services;
+
+import java.util.List;
+
+public class CalculationService<T> {
+	// metodos
+	public static T max(List<T> list) {
+		if (list.isEmpty()) {
+			throw new IllegalStateException("List can't be empty");
+		}
+		
+		//
+		
+		
+		return null;
+	}
+}

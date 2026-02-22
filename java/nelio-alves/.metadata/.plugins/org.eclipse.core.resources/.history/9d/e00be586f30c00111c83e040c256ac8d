@@ -1,0 +1,27 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import services.UsaInterestService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Amount: $ ");
+		Double amount = input.nextDouble();
+		System.out.print("Months: ");
+		Integer months = input.nextInt();
+		
+		UsaInterestService service = new UsaInterestService(2.0);
+		Double payment = service.payment(amount, months);
+		
+		System.out.printf("\nPayment after %d months\n", months);
+		System.out.printf("$ %.2f\n", payment);
+		
+		input.close();
+	}
+}

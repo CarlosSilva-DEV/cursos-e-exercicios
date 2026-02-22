@@ -1,0 +1,20 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Locale;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		String path = "/home/thais/Documentos/cursos-e-exercicios/java/nelio-alves/ex018-generics-ii/data.csv";
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+	}
+}

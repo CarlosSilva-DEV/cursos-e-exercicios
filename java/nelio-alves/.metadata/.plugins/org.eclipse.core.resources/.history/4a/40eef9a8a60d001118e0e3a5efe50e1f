@@ -1,0 +1,6 @@
+package entities.copy;
+
+public interface Shape {
+	
+	Double area();
+}

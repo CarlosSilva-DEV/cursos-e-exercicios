@@ -1,0 +1,39 @@
+package application;
+
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+import java.util.Scanner;
+
+import model.entities.Contract;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+		
+		System.out.println("Insert the contract data:");
+		System.out.print("Number: ");
+		Integer contractNum = input.nextInt();
+		
+		System.out.print("Date (dd/MM/yyyy): ");
+		String contractDate = input.nextLine();
+		
+		
+		System.out.print("Contract total value: $ ");
+		Double contractTotalValue = input.nextDouble();
+		
+		System.out.print("Insert the number of installments: ");
+		int n = input.nextInt();
+		
+		Contract c = new Contract(contractNum, c.setDate(contractDate), contractTotalValue);
+		
+		System.out.println("\n\nINSTALLMENTS:");
+		for (int i = 1; i <= n; i++) {
+			
+		}
+		
+	}
+}

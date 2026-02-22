@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <p>Este video está hospedado no meu próprio servidor ;)
+    </p>
+    <video src="midia/tupac.mp4" width="400" preload="metadata" poster="imagens/piccolo and gohan.jpg" controls></video> <!-- Tag utilizada para inserir videos. Parâmetro "controls" (mesma ideia do audio). Caso queira inserir mais de um formato de vídeo para abranger diferentes navegadores, método abaixo -->
+    <!-- ADENDO: parâmretro poster é utilizado para incluir thumbnail em vídeos -->
+    <video preload="auto" width="400" poster="imagens/piccolo and gohan.jpg" controls>
+        <source src="midia/tupac.mp4" type="video/mp4"> <!-- Outros tipos de arquivo de video: m4v, webm, ogv -->
+    </video>
+    <h1>Inserindo vídeos externos (YouTube)</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MWnyCxva6bA?si=6Q8qtRaTvVIMsePL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- Código HTML obtido através da função "Incorporar" no YouTube -->
+</body>
+</html>

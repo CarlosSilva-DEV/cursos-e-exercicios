@@ -1,0 +1,10 @@
+package services;
+
+import java.util.List;
+
+public class CalculationService<T> {
+	// metodos
+	public T max(List<T> list) {
+		return null;
+	}
+}

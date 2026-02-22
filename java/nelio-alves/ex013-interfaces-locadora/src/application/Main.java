@@ -1,0 +1,49 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.CarRental;
+import entities.Vehicle;
+import services.BrazilTaxService;
+import services.RentalService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		Vehicle v = new Vehicle();
+		CarRental cr = new CarRental();
+		
+		System.out.println("Insert the rental data:");
+		System.out.print("Car model: ");
+		v.setModel(input.nextLine());
+		cr.setVehicle(v);
+		
+		System.out.print("Pickup date (dd/MM/yyyy HH:mm): ");
+		String pickupDate = input.nextLine();
+		cr.setStart(pickupDate);
+		System.out.print("Return date (dd/MM/yyyy HH:mm): ");
+		String returnDate = input.nextLine();
+		cr.setFinish(returnDate);
+		
+		System.out.print("Price per hour: $ ");
+		Double pricePerHour = input.nextDouble();
+		System.out.print("Price per day: $ ");
+		Double pricePerDay = input.nextDouble();
+		
+		// com a dependência de uma interface, é possível alterar o serviço de imposto de forma mais simples
+		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+		rentalService.processInvoice(cr);
+		
+		System.out.println("\n\nINVOICE:");
+		System.out.printf("Basic Payment: $ %.2f\n", cr.getInvoice().getBasicPayment());
+		System.out.printf("Taxes: $ %.2f\n", cr.getInvoice().getTax());
+		System.out.printf("Total Payment: $ %.2f\n", cr.getInvoice().totalPayment());
+		
+		
+		input.close();
+	}
+}

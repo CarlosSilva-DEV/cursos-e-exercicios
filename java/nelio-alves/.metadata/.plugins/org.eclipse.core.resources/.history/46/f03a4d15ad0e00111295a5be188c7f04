@@ -1,0 +1,53 @@
+package entities;
+
+import java.util.List;
+
+public class Product {
+	private String name;
+	private Double price;
+	
+	// Construtor
+	public Product() {
+	}
+
+	public Product(String name, Double price) {
+		this.name = name;
+		this.price = price;
+	}
+	
+	// getters e setters
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	
+	// metodos
+	@Override
+	public String toString() {
+		return "Product [name=" + name + ", price=" + price + "]";
+	}
+	
+	public static Double sumByFirstLetter(List<Product> products) {
+		int i = 0;
+		
+		Double sum = 0.00;
+		
+		while (products.get(i) != null) {
+			if (products.get(i).getName().charAt(0) == 'T') {
+				sum += products.get(i).getPrice();
+			}
+		i++;
+		}
+		
+		return sum;
+	}
+}

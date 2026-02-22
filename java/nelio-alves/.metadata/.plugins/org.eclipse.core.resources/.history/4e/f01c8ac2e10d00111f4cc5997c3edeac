@@ -1,0 +1,21 @@
+package problema2.application;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import problema2.entities.Product;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Map<Product, Double> cookies = new HashMap<>();
+		
+		Product p1 = new Product("TV", 900.00);
+		Product p2 = new Product("Notebook", 1200.00);
+		Product p3 = new Product("Tablet", 400.00);
+		
+		cookies.put(p1, 10000.00);
+		cookies.put(p1, 20000.00);
+		cookies.put(p1, 15000.00);
+	}
+}

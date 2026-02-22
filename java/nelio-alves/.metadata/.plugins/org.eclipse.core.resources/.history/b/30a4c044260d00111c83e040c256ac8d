@@ -1,0 +1,16 @@
+package services;
+
+public class PrintService {
+	
+	// metodos
+	public void addValue(Integer value) {
+	}
+	
+	public Integer first() {
+		return null;
+	}
+	
+	public void print() {
+	}
+	
+}

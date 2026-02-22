@@ -1,0 +1,26 @@
+package problema2.application;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import problema2.entities.Product;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Map<Product, Integer> stock = new HashMap<>();
+		
+		Product p1 = new Product("TV", 900.00);
+		
+		stock.put(p1, 10000);
+		stock.put(p1, 20000);
+		stock.put(p1, 15000);
+		
+		Product ps = new Product("TV", 900.00);
+		
+		System.out.println("p1 hashCode: " + p1.hashCode());
+		System.out.println("ps hashCode: " + ps.hashCode());
+		System.out.println("ps equals p1? " + ps.equals(p1));
+		System.out.println("contains 'ps' key? " + stock.containsKey(ps));
+	}
+}

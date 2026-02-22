@@ -1,0 +1,29 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import services.PrintService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		// classe do tipo generics
+		PrintService<Integer> ps = new PrintService<>();
+		
+		System.out.print("How many values? ");
+		int n = input.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			Integer num = input.nextInt();
+			ps.addValue(num);
+		}
+		
+		ps.print();
+		
+		input.close();
+	}
+}

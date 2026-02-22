@@ -1,0 +1,16 @@
+package services;
+
+public class UsaInterestService implements InterestService {
+	private Double interestRate;
+	
+	// Construtor
+	public UsaInterestService(Double interestRate) {
+		this.interestRate = interestRate;
+	}
+	
+	// metodos
+	@Override
+	public Double getInterestRate() {
+		return interestRate;
+	}
+}

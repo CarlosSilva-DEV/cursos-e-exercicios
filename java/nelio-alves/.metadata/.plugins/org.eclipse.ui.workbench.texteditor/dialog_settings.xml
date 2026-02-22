@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="true"/>
+		<list key="replacehistory">
+			<item value="salary"/>
+		</list>
+		<list key="findhistory">
+			<item value="salario"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="243"/>
+		<item key="DIALOG_Y_ORIGIN" value="371"/>
+	</section>
+</section>

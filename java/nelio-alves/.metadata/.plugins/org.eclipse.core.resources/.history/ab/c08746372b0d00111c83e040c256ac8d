@@ -1,0 +1,13 @@
+package services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CalculationService<T> {
+	private List<T> list = new ArrayList<>();
+	
+	// metodos
+	public T max(List<T> list) {
+		return null;
+	}
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/">repositório público no GitHub</a>
+    </p> <!-- Neste caso, o acesso ao link é feito de maneira sobreposta a página atual (ou seja, ao clicarmos, a nova página é aberta encima da página atual)-->
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="noopener noreferrer">canal gratuito no YouTube</a>
+    </p> <!-- Já neste caso, ao definirmos o target="_blank", o link para a nova página será acessado através de uma nova página em branco (about:blank). Ao definirmos a relação, estamos dizendo que o link é de origem externa. NoOpener: evita uma brecha de segurança ao abrir um link externo que nos direciona a uma nova aba; NoReferrer: Oculta o site de origem o qual direcionou tráfego ao link externo -->
+    <h1>Usando links internos</h1>
+    <p>Esta é a primeira página do site. <a href="pag002.html" rel="next"> Clique aqui para acessar a segunda página</a>
+    </p> <!-- rel="next" para definir a página que está sendo acessada pelo link como a 'próxima'. Isso faz com que o navegador identifique melhor a sua navegação entre páginas no site -->
+    <p>Você também pode acessar a nossa <a href="Noticias/pag003.html" target="_self" rel="next">página de notícias</a>
+    </p> <!-- Existe também o target="_self", que define que a nova página a ser acessada será sobreposta a página atual (porém, senão incluirmos este parâmetro, ela será sobreposta por padrão) -->
+    <h1>Links para Download:</h1>
+    <ul>
+        <li><a href="Livro/Trabalho.pdf" download="Trabalho.pdf" type="application/pdf">Arquivo PDF</a></li>
+        <li><a href="Livro/Trabalho.rar" download="Trabalho.rar" type="application/vnd.rar">Arquivo RAR</a></li>
+    </ul> <!-- Ao definir o local de referência do arquivo (href), precisamos adicionar o parâmetro download com o nome do arquivo. No parâmetro type, precisa definir o tipo da aplicação a ser baixada (consta na página do IANA Media Types) -->
+</body>
+</html>

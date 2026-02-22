@@ -1,0 +1,18 @@
+package model.services;
+
+public class PaypalService implements OnlinePaymentService {
+
+	@Override
+	public Double paymentFee(Double amount) {
+		return amount * 0.02;
+	}
+
+	@Override
+	public Double interest(Double amount, Integer months) {
+		Double total = 0.00;
+		for (int i = 1; i <= months; i++) {
+			total = amount * i;
+		}
+		return total;
+	}
+}

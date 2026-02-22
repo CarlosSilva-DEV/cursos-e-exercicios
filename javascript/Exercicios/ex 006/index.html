@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div.area {
+            font: normal 20pt Arial;
+            background: rgb(158, 255, 128);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }  
+    </style>
+</head>
+<body>
+    <!-- Chamada de funções através de eventos no HTML
+    <div class="area" id="area1" onclick="clicar()">
+        Interaja
+    </div>
+
+    <div class="area" id="area2" onmouseenter="entrar()">
+        Interaja
+    </div>
+
+    <div class="area" id="area3" onmouseout="sair()">
+        Interaja
+    </div>
+
+    <br> -->
+
+    <!-- Chamada de funções através de EventListeners-->
+    <div class="area" id="area1">
+        Interaja
+    </div>
+
+    <div class="area" id="area2">
+        Interaja
+    </div>
+
+    <div class="area" id="area3">
+        Interaja
+    </div>
+
+    <script>
+        var a1 = window.document.getElementById('area1');
+        var a2 = window.document.getElementById('area2');
+        var a3 = window.document.getElementById('area3');
+
+        a1.addEventListener('click', clicar);
+        a2.addEventListener('mouseenter', entrar);
+        a3.addEventListener('mouseout', sair);
+
+
+        // Funções
+        function clicar() {
+            a1.innerText = 'Clicou ;)';
+            a1.style.background = 'red';
+        }
+
+        function entrar() {
+            a2.innerText = 'Entrou :o';
+            a2.style.background = 'yellow';
+        }
+
+        function sair() {
+            a3.innerText = 'Saiu :3';
+            a3.style.background = 'blue';
+        }
+    </script>
+</body>
+</html>

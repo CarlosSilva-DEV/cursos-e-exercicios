@@ -1,0 +1,37 @@
+package entities;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Course {
+	private String name;
+	private Set<Student> students = new HashSet<>();
+	
+	// Construtor
+	public Course() {
+	}
+
+	public Course(String name) {
+		this.name = name;
+	}
+	
+	// getters e setters
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Student getStudents() {
+		Student s;
+		for (Student s : students) {
+			return s;
+		}
+		return s;
+	}
+	
+	public void addStudents(Set<Student> students) {
+		this.students = students;
+	}
+}

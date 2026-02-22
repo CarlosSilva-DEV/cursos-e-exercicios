@@ -1,0 +1,33 @@
+package entities;
+
+import java.time.Instant;
+import java.util.Objects;
+
+public class User {
+	private String name;
+	private Instant moment;
+	
+	// Construtor
+	public User() {
+	}
+
+	public User(String name, Instant moment) {
+		this.name = name;
+		this.moment = moment;
+	}
+	
+	// getters e setters
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public Instant getMoment() {
+		return moment;
+	}
+	public void setMoment(Instant moment) {
+		this.moment = moment;
+	}
+}

@@ -1,0 +1,38 @@
+package application;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Map<String, String> cookies = new TreeMap<>();
+
+		cookies.put("username", "Maria");
+		cookies.put("email", "maria@gmail.com");
+		cookies.put("phone", "(11) 99999-9999");
+		cookies.put("dateofbirth", "12-12-1972");
+
+		System.out.println("ORIGINAL COOKIES:");
+
+		for (String key : cookies.keySet()) {
+			System.out.println(key + ": " + cookies.get(key));
+		}
+		
+		System.out.println("\ncontains 'phone' key? " + cookies.containsKey("phone"));
+
+		
+		// Map não permite repetições, sobrescreve os dados anteriores
+		cookies.put("username", "Carlos");
+		cookies.put("dateofbirth", "16-06-2006");
+		
+		cookies.remove("phone");
+
+		System.out.println("\n\nMODIFIED COOKIES:");
+
+		for (String key : cookies.keySet()) {
+			System.out.println(key + ": " + cookies.get(key));
+		}
+		System.out.println("\ncontains 'phone' key? " + cookies.containsKey("phone"));
+	}
+}

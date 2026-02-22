@@ -1,0 +1,27 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+import entities.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		List<Employee> list = new ArrayList<>();
+		String path = "/home/thais/Documentos/cursos-e-exercicios/java/nelio-alves/ex016-interface-comparable/in.csv";
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+		
+		
+	}
+}

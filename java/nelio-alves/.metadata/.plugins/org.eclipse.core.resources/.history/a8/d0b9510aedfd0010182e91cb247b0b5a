@@ -1,0 +1,20 @@
+package application;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class Main {
+
+	public static void main(String[] args) {
+		LocalDate d1 = LocalDate.parse("2026-01-30");
+		LocalDateTime d2 = LocalDateTime.parse("2026-01-30T11:59:26");
+		Instant d3 = Instant.parse("2026-01-30T11:59:26Z");
+		
+		LocalDate pastWeek = d1.minusDays(7);
+		LocalDate nextWeek = d1.plusDays(7);
+		
+		System.out.println("LocalDate (Past Week): " + pastWeek);
+		System.out.println("LocalDate (Next Week): " + nextWeek);
+	}
+}

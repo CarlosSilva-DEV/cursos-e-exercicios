@@ -1,0 +1,23 @@
+package application;
+
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the file path: ");
+		String path = input.nextLine();
+		
+		try () {
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+		
+	}
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Acesse este site em vários dispositivos diferentes ou aumente/diminua o tamanho do navegador.
+    </p>
+    <picture> <!-- Tag que informa que será inserida uma imagem-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.jpg" type="image/jpg">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.jpg" type="image/jpg"> <!--Tag utilizada para definir um limite mínimo ou máximo da midia a ser carregada. Neste exemplo, caso a foto-g.jpg for maior que 1050px (limite definido), a outra imagem a ser exibida será a foto-m.jpg -->
+        <img src="imagens/foto-g.jpg" alt="Imagem flexível">
+    </picture> <!-- Na tag img src, devemos inserir a imagem BASE. Já nas source medias, devemos inserir as demais. Se a base for uma imagem G, as source medias devem ser M e P, respectivamente, de baixo pra cima. -->
+    <h1>Reproduzindo áudios</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5
+    </p>
+    <audio src="midia/young-thug-check.mp3" controls></audio> <!-- Tag utilizada para inserir midia de audio. Parâmetro "controls" serve pra inserir um controlador do áudio para reproduzir -->
+    <audio preload="metadata" controls loop> <!-- preload: précarregamento do audio; controls: adiciona o controlador de reprodução; loop: loop de reprodução do áudio sempre que terminado -->
+        <source src="midia/young-thug-check.mp3" type="audio/mpeg"> <!-- Outra forma de inserir o áudio, incluindo sources dentro da tag de áudio. Outros exemplos de tipos de áudios podem ser: audio/ogg, audio/wav, audio/flac -->
+    </audio>
+</body>
+</html>

@@ -1,0 +1,32 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+import model.entities.Contract;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		Contract c = new Contract();
+		
+		System.out.println("Insert the contract data:");
+		System.out.print("Number: ");
+		c.setNumber(input.nextInt());
+		
+		System.out.print("Date (dd/MM/yyyy): ");
+		c.setDate(input.nextLine());
+		
+		System.out.print("Contract total value: $ ");
+		c.setTotalValue(input.nextDouble());
+		
+		System.out.print("Insert the number of installments: ");
+		int n = input.nextInt();
+		
+		
+		System.out.println("\n\nINSTALLMENTS:");
+		
+		
+	}
+}

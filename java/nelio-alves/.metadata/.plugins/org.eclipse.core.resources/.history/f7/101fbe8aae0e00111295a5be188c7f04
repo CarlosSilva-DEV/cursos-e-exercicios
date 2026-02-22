@@ -1,0 +1,20 @@
+package services;
+
+import java.util.List;
+import java.util.function.Predicate;
+
+import entities.Product;
+
+public class ProductService implements Predicate<Product>{
+	public Double sumByFirstLetter(List<Product> list, Predicate<Product> criteria) {
+		Double sum = 0.00;
+		
+		for (Product p : list) {
+			if (p.getName().charAt(0) == 'T') {
+				sum += p.getPrice();
+			}
+		}
+		
+		return sum;
+	}
+}

@@ -1,0 +1,37 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Reservation;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		Reservation r = new Reservation();
+		
+		// registro da reserva
+		System.out.print("Room number: ");
+		r.setRoomNumber(input.nextInt());
+		
+		System.out.print("Check-in date (dd/MM/yyyy): ");
+		String checkin = input.nextLine();
+		System.out.print("Check-out date (dd/MM/yyyy): ");
+		String checkout = input.nextLine();
+		r.updateDates(checkin, checkout);
+		
+		System.out.println(r);
+		
+		// atualização da reserva
+		System.out.println("\n\nEnter data to update the reservation:");
+		System.out.print("Check-in date (dd/MM/yyyy): ");
+		String updatedCheckin = input.nextLine();
+		System.out.print("Check-out date (dd/MM/yyyy): ");
+		String updatedCheckout = input.nextLine();
+		
+		
+		input.close();
+	}
+}

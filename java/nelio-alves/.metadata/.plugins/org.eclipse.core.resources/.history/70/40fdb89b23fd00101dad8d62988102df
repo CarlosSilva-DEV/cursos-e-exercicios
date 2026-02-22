@@ -1,0 +1,17 @@
+package application;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Defina um número de linhas para a matriz: ");
+		int m = input.nextInt();
+		System.out.println("Defina um número de colunas para a matriz: ");
+		int n = input.nextInt();
+		
+		
+	}
+}

@@ -1,0 +1,78 @@
+package application;
+
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Set;
+
+import entities.Course;
+import entities.Student;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+
+		Set<Student> students = new HashSet<>();
+
+		// CURSO A
+		System.out.print("How many students for course A? ");
+		int n = input.nextInt();
+		Course courseA = new Course("A");
+
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			Student student = new Student(code);
+
+			student.enroll(courseA);
+
+			students.add(student);
+		}
+
+		courseA.addStudents(students);
+		students = new HashSet<>();
+
+		// CURSO B
+		System.out.print("How many students for course B? ");
+		n = input.nextInt();
+		Course courseB = new Course("B");
+
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			Student student = new Student(code);
+
+			student.enroll(courseB);
+
+			students.add(student);
+		}
+
+		courseB.addStudents(students);
+		students = new HashSet<>();
+
+		// CURSO C
+		System.out.print("How many students for course C? ");
+		n = input.nextInt();
+		Course courseC = new Course("C");
+
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			Student student = new Student(code);
+
+			student.enroll(courseC);
+
+			students.add(student);
+		}
+
+		courseC.addStudents(students);
+		students = new HashSet<>();
+		
+		
+		// Contagem
+		Set<Student> total = new HashSet<>(courseA.getStudents());
+		total.add((Student) courseB.getStudents());
+		total.add((Student) courseC.getStudents());
+		
+		System.out.println("Total students: " + total.size());
+	}
+}

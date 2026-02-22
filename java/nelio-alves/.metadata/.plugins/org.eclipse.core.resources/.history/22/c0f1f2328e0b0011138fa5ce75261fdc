@@ -1,0 +1,42 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import model.entities.Account;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		Account acc = new Account();
+		
+		// criação da conta
+		System.out.println("Enter account data");
+		System.out.print("Number: ");
+		acc.setNumber(input.nextInt());
+		System.out.print("Holder: ");
+		acc.setHolder(input.nextLine());
+		System.out.print("Initial balance: $ ");
+		acc.setBalance(input.nextDouble());
+		System.out.print("Withdraw limit: $ ");
+		acc.setWithdrawLimit(input.nextDouble());
+		
+		// operação de saque ou deposito
+		System.out.print("\nDo you want to withdraw or deposit money on your account (w/d)? ");
+		char typeOfOperation = input.next().charAt(0);
+		
+		switch (typeOfOperation) {
+			case 'w':
+				System.out.print("Enter amount for withdraw: $ ");
+				acc.withdraw(input.nextDouble());
+				System.out.println("New balance: $ " + acc.getBalance());
+				break;
+			case 'd':
+				System.out.print("Enter amount for deposit: $");
+				acc.deposit(input.nextDouble());
+				System.out.println("New balance: $ " + acc.getBalance());
+		}
+	}
+}

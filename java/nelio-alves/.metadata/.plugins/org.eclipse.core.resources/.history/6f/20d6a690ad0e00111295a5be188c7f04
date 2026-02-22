@@ -1,0 +1,37 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import entities.Product;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Product> list = new ArrayList<>();
+		
+		list.add(new Product("TV", 900.00));
+		list.add(new Product("Mouse", 50.00));
+		list.add(new Product("Tablet", 350.50));
+		list.add(new Product("HD Case", 80.90));
+		
+		Function<Product, Double> products = list.stream().map(sumByFirstLetter(list)).collect(Collectors.toList());
+	}
+	
+	public static Double sumByFirstLetter(List<Product> products) {
+		int i = 0;
+		
+		Double sum = 0.00;
+		
+		while (products.get(i) != null) {
+			if (products.get(i).getName().charAt(0) == 'T') {
+				sum += products.get(i).getPrice();
+			}
+		i++;
+		}
+		
+		return sum;
+	}
+}

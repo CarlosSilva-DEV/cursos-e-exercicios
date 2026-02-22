@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: rgb(0, 119, 255);
+            color: white;
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div><br>
+    <!-- <div name="msg">Clique em mim</div><br> !-->
+    <!-- <div class="msg">Clique em mim</div><br> !-->
+
+    <script>
+        /* Pegando elementos HTML através de Tags
+        var p1 = window.document.getElementsByTagName('p')[0];
+        window.document.writeln(`Está escrito assim ${p1.innerText}`);
+        */
+
+        /* Pegando elementos HTML através de ID
+        var d = window.document.getElementById("msg");
+        d.innerText = 'Aguardando...';
+        */
+
+        /* Pegando elementos HTML através de Name
+        var d = window.document.getElementByName("msg");
+        d.innerText = 'Aguardando...';
+        */
+
+        /* Pegando elementos HTML através de Class
+        var d = window.document.getElementByClass("msg");
+        d.innerText = 'Aguardando...';
+        */
+
+        /* Pegando elementos HTML através de Selector
+        - seleções de classes: utilizando ponto ('div.msg')
+        - seleção de IDs: utilizando hashtag ('div#msg')
+
+        var d = window.document.querySelector("div#msg");
+        d.style.color = 'black';
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <section>
+        <div class="main-content">
+            <span id="numero-span">Número: 
+                <input type="number" id="numero-input">
+            </span>
+
+            <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+
+            <br><br>
+
+            <div id="result">
+                <small id="result-msg">Digite um número acima</small>
+                <select name="tabuada" id="select-tabuada" size="10" style="display: none;"></select>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Curso em Video</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

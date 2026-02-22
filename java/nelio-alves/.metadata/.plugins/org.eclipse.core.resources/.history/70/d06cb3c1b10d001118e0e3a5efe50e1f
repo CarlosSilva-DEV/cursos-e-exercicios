@@ -1,0 +1,22 @@
+package application;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class TreeSetProgram {
+
+	public static void main(String[] args) {
+		// TreeSet: O(log(n)), implementação mais lenta, garante ordenação (compareTo)
+		Set<String> set = new TreeSet<>();
+		
+		set.add("TV");
+		set.add("Notebook");
+		set.add("Tablet");
+		
+		for (String s : set) {
+			System.out.println(s);
+		}
+		
+		System.out.println("contains 'Notebook'?: " + set.contains("Notebook"));
+	}
+}

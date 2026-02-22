@@ -1,0 +1,19 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+import entities.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		List<Employee> list = new ArrayList<>();
+		String path = "/home/thais/Documentos/cursos-e-exercicios/java/nelio-alves/ex016-interface-comparable/in.csv";
+		
+		
+		
+	}
+}

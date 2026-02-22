@@ -1,0 +1,10 @@
+package services;
+
+public class BrazilInterestService {
+	private Double interestRate;
+	
+	// metodos
+	public Double payment(Double amount, Integer months) {
+		return null;
+	}
+}

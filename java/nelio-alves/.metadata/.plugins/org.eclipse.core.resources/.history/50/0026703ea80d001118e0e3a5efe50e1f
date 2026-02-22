@@ -1,0 +1,24 @@
+package problema2.application;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Integer> intList = Arrays.asList(1, 2, 3, 4);
+		List<Double> doubleList = Arrays.asList(3.14, 6.28);
+		List<Object> objList = new ArrayList<>();
+		
+		copy(intList, objList);
+		copy(doubleList, objList);
+	}
+	
+	public static void copy(List<? extends Number> source, List<? super Number> destiny) {
+		
+		for (Number num : source) {
+			destiny.add(num);
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;ex007-polimorfismo&apos; to &apos;ex007-herança-polimorfismo&apos;&#x0A;- Original element: &apos;ex007-polimorfismo&apos;&#x0A;- Renamed element: &apos;ex007-polimorfismo&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;ex007-polimorfismo&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=ex007-polimorfismo" name="ex007-herança-polimorfismo" references="true" stamp="1770915974703" version="1.0"/>
+</session>

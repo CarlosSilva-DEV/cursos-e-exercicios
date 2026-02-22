@@ -1,0 +1,27 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		List<Integer> list = new ArrayList<>();
+		
+		System.out.print("How many values? ");
+		int n = input.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			Integer num = input.nextInt();
+			list.add(num);
+		}
+		
+		System.out.println(list);
+		
+		input.close();
+	}
+}

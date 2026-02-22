@@ -1,0 +1,36 @@
+package application;
+
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Set;
+
+import entities.Course;
+import entities.Student;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		Set<Student> students = new HashSet<>();
+		
+		Course courseA = new Course("A");
+		
+		//
+		System.out.print("How many students for course A? ");
+		int n = input.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			
+			Student s = new Student(code);
+			s.enroll(courseA);
+			
+			students.add(s);
+		}
+		
+		courseA.addStudents(students);
+	}
+}

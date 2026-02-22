@@ -1,0 +1,32 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the file path: ");
+		String path = input.nextLine();
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+			String line = br.readLine();
+			String[] elements = line.split(",");
+			int i = 0;
+			
+			while (line != null) {
+				System.out.println(elements[i]);
+				i++;
+				line = br.readLine();
+			}
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		} finally {
+			input.close();
+		}
+	}
+}

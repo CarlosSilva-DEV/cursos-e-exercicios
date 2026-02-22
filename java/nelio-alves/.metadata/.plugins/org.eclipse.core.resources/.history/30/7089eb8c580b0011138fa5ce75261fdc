@@ -1,0 +1,36 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.PessoaFisica;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the number of tax payers: ");
+		int n = input.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			System.out.printf("\nTax payer #%d data:", i + 1);
+			System.out.print("Individual or company (i/c)? ");
+			char typeOfPayer = input.next().charAt(0);
+			
+			switch (typeOfPayer) {
+				case 'i':
+					PessoaFisica pf = new PessoaFisica();
+					
+					System.out.print("Name: ");
+					pf.setName(input.nextLine());
+					System.out.print("Anual income: ");
+					pf.setYearIncome(input.nextDouble());
+					
+					
+					
+			}
+		}
+	}
+}

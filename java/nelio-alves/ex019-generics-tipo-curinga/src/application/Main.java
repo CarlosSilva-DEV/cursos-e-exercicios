@@ -1,0 +1,23 @@
+package application;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Integer> intList = Arrays.asList(5, 2, 10);
+		List<String> strList = Arrays.asList("Maria", "Alex", "Bob");
+		
+		printList(intList);
+		System.out.println();
+		printList(strList);
+	}
+	
+	// utilizando supertipo ?, o método receberá lista de qualquer tipo
+	public static void printList(List<?> list) {
+		for (Object obj : list) {
+			System.out.println(obj);
+		}
+	}
+}

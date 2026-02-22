@@ -1,0 +1,72 @@
+package application;
+
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Set;
+
+import entities.Course;
+import entities.Student;
+import entities.Teacher;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		Set<Student> students = new HashSet<>();
+		Teacher alex = new Teacher();
+		
+		//
+		System.out.print("How many students for course A? ");
+		int n = input.nextInt();
+		
+		Course courseA = new Course("A", alex);
+		
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			
+			Student s = new Student(code);
+			s.enroll(courseA);
+			
+			students.add(s);
+		}
+		
+		courseA.addStudents(students);
+		
+		//
+		System.out.print("How many students for course B? ");
+		n = input.nextInt();
+		
+		Course courseB = new Course("B", alex);
+		
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			
+			Student s = new Student(code);
+			s.enroll(courseB);
+			
+			students.add(s);
+		}
+		
+		courseB.addStudents(students);
+		
+		//
+		System.out.print("How many students for course C? ");
+		n = input.nextInt();
+		
+		Course courseC = new Course("C", alex);
+		
+		for (int i = 0; i < n; i++) {
+			Integer code = input.nextInt();
+			
+			Student s = new Student(code);
+			s.enroll(courseC);
+			
+			students.add(s);
+		}
+		
+		courseC.addStudents(students);
+	}
+}

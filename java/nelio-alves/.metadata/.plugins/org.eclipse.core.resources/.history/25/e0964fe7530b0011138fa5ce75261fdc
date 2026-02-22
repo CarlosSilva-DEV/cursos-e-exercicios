@@ -1,0 +1,44 @@
+package entities;
+
+public class PessoaFisica extends Pessoa {
+	private Double healthExpenses;
+	
+	// Construtor
+	public PessoaFisica() {
+	}
+
+	public PessoaFisica(String name, Double yearIncome, Double healthExpenses) {
+		super(name, yearIncome);
+		this.healthExpenses = healthExpenses;
+	}
+	
+	// getters e setters
+	public Double getHealthExpenses() {
+		return healthExpenses;
+	}
+	public void setHealthExpenses(Double healthExpenses) {
+		this.healthExpenses = healthExpenses;
+	}
+	
+	// metodos
+	@Override
+	public Double calcTaxes() {
+		Double total = 0.00;
+		
+		if (this.getYearIncome() < 20000.00) {
+			// imposto de 15%
+			if (this.getHealthExpenses() > 0) {
+				total = (this.getYearIncome() * 0.15) - (this.getHealthExpenses() * 0.5);
+			} else if (this.getHealthExpenses() == 0) {
+				total = this.getYearIncome() * 0.15;
+			} else {
+				System.out.println("Valor inválido: Gastos com saúde não podem ser negativos");;
+			}
+		} else {
+			// imposto de 25%
+		}
+		m
+		
+		return null;
+	}
+}

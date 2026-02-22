@@ -1,0 +1,19 @@
+package services;
+
+import java.util.List;
+
+import entities.Product;
+
+public class ProductService {
+	public static Double sumByFirstLetter(List<Product> products) {
+		Double sum = 0.00;
+		
+		for (Product p : products) {
+			if (p.getName().charAt(0) == 'T') {
+				sum += p.getPrice();
+			}
+		}
+		
+		return sum;
+	}
+}

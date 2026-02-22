@@ -1,0 +1,70 @@
+package application;
+
+import java.time.LocalDate;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Reservation;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		Reservation r = new Reservation();
+
+		// registro da reserva
+		System.out.print("Room number: ");
+		r.setRoomNumber(input.nextInt());
+		
+		input.nextLine();
+		System.out.print("Check-in date (dd/MM/yyyy): ");
+		String checkinString = input.nextLine();
+		System.out.print("Check-out date (dd/MM/yyyy): ");
+		String checkoutString = input.nextLine();
+
+		LocalDate checkin = LocalDate.parse(checkinString, Reservation.dtf);
+		LocalDate checkout = LocalDate.parse(checkoutString, Reservation.dtf);
+
+		if (checkout.isBefore(checkin)) {
+			System.out.println("Reservation Error: Check-out date must be after check-in date");
+		} else {
+			r.updateDates(checkin, checkout);
+			System.out.println(r);
+		}
+		
+		// atualização da reserva
+		System.out.print("\nDo you want to update the reservation info (y/n)? ");
+		char updateResponse = input.next().charAt(0);
+
+		switch (updateResponse) {
+			case 'y':
+				System.out.println("\nEnter data to update the reservation:");
+				
+				input.nextLine();
+				System.out.print("Check-in date (dd/MM/yyyy): ");
+				checkinString = input.nextLine();
+				System.out.print("Check-out date (dd/MM/yyyy): ");
+				checkoutString = input.nextLine();
+	
+				checkin = LocalDate.parse(checkinString, Reservation.dtf);
+				checkout = LocalDate.parse(checkoutString, Reservation.dtf);
+	
+				if (checkin.isBefore(checkout)) {
+					System.out.println("Update Error: Check-out date must be after check-in date");
+				} else {
+					r.updateDates(checkin, checkout);
+					System.out.println(r);
+				}
+				
+				break;
+			case 'n':
+				break;
+			default:
+				System.out.println("Invalid input, please try again");
+		}
+
+		input.close();
+		System.out.print("\n***END OF THE APPLICATION***");
+	}
+}

@@ -1,0 +1,22 @@
+package application;
+
+import java.util.List;
+
+import entities.Shape;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static Double totalArea(List<Shape> list) {
+		Double sum = 0.00;
+		
+		for (Shape s : list) {
+			sum += s.area();
+		}
+		
+		return sum;
+	}
+}

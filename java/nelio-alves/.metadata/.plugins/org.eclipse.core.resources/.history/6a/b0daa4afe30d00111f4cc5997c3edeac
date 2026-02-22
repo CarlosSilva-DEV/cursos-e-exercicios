@@ -1,0 +1,17 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the file path: ");
+		String path = "/home/thais/Documentos/cursos-e-exercicios/java/nelio-alves/ex026-map-ii/src/in.csv";
+		
+		
+	}
+}
