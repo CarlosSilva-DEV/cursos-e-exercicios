@@ -1,0 +1,10 @@
+/.metadata/
+
+# Compiled class files
+*.class
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
