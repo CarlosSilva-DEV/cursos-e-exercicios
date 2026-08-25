@@ -1,0 +1,37 @@
+body {
+    background-color: #8296ff66;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #0f0f46ff;
+}
+
+/*
+* HTML id = #
+* HTML class = .
+*/
+h1#main-title {
+    text-align: center;
+    background-color: #f0f0e6ff;
+}
+
+h2 {
+    color: #050519ff;
+}
+
+.basic {
+    color: #2da01eff;
+}
+
+.intermediate {
+    color: #c3c346ff;
+}
+
+.advanced {
+    color: #ff4628ff;
+}
+
+p {
+    text-align: justify;
+}
