@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div:hover { /* aplicando cor vermelha quando o estado da div for hover */
+            color: red;
+        }
+
+        div > p { /* elemento escondido por padrão, '>' indica que será aplicado em todo p filho de div */
+            display: none;
+        }
+
+        div:hover > p { /* quando o estado da div for hover, esse comportamento será aplicado a todo p filho de div */
+            display: block;
+            color: black;
+            background-color: #fff055ff;
+        }
+
+    </style>
+</head>
+<body>
+        <h1>Exemplo de hover</h1>
+        <p>Passe o mouse sobre o texto abaixo</p>
+        <div>
+            Passe o mouse aqui
+            <p>VOCÊ ENCONTROU O TEXTO ESCONDIDO :)</p>
+        </div>
+</body>
+</html>

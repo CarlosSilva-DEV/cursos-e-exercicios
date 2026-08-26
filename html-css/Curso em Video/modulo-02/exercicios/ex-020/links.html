@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Pseudo-classes */
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+
+        /* Pseudo-elementos (::) */
+        a::after {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/CarlosSilva-DEV">Perfil GitHub</a></li>
+        <li><a href="https://linkedin.com/in/carlos-silva-7b3308232"/>Perfil LinkedIn</a></li>
+        <li><a href="https://leetcode.com/u/carlossilva-dev">Perfil LeetCode</a></li>
+    </ul>
+</body>
+</html>
