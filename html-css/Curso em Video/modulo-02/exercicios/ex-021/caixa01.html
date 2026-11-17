@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 {
+            background-color: lightgrey;
+            height: 300px;
+            width: 300px;
+
+            /*
+            shorthand - border: width, style, color
+            propriedades border-style: solid, dashed, dotted, double, groove
+            */
+            border: 10px solid darkslategray;
+
+            /*
+            shorthand - padding: top right bottom left
+            define-se apenas 1 propriedade quando as demais forem iguais 
+            define-se 2 propriedades para: top == bottom && right == left
+            */
+            padding: 10px;
+
+            /*
+            shorthand - margin: top right bottom left
+            margin: auto - centralizar a caixa
+            */
+            margin: 20px auto 40px auto;
+
+            /* 
+            shorthand - outline: width, style, color
+            propriedades outline-style: solid, dashed, dotted, double, groove
+            */
+            outline: 5px dashed salmon
+        }
+
+        a {
+            border-width: 3px;
+            border-style: groove;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Exemplo de caixa Box-Level</h1>
+        <p>Parágrafos também são exemplos de Box-Level, mas os <a href="#">links são exemplos de Inline-Level</a></p>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: #383d3dff;
+            padding: 10px;
+        }
+
+        nav > a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 50px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        article {
+            text-align: justify;
+        }
+
+        article > aside {
+            width: 40%;
+            padding-left: 0.5rem;
+            margin-left: 0.5rem;
+            box-shadow: inset 5px 0 5px -5px #29627e;
+            font-style: italic;
+            color: #29627e;
+        }
+
+        aside > p {
+            margin: 0.5rem;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+        <header> <!-- Cabeçalhos -->
+            <h1>Tags de Agrupamento (Grouping Tags)</h1>
+            <nav> <!-- Barras de Navegação -->
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </nav>
+        </header>
+
+        <main> <!-- Conteúdo Principal -->
+            <section id="assuntos"> <!-- Seções -->
+                <nav>
+                    <a href="#">Esportes</a>
+                    <a href="#">Política</a>
+                    <a href="#">Tecnologia</a>
+                </nav>
+            </section>
+            <section id="noticias">
+                <article> <!-- Artigos -->
+                    <h2>Noticia 1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto blanditiis doloribus, doloremque similique deserunt voluptates, totam, officia eaque adipisci accusamus obcaecati dignissimos explicabo consectetur tenetur eligendi assumenda sed exercitationem pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi quas aut velit! Amet voluptatibus saepe facere voluptas, quos suscipit dolorem commodi doloremque repellendus recusandae distinctio iusto voluptate provident deleniti!</p>
+                    <aside> <!-- Conteúdo periférico relacionado ao conteúdo principal -->
+                        <p>Artigo de autoria de <strong>Lorem Ipsum de Souza e Silva</strong>. A reprodução deste conteúdo sem a devida autorização pode acarretar em medidas legais cabíveis.</p>
+                    </aside>
+                </article>
+
+                <article>
+                    <h2>Noticia 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores obcaecati incidunt ex, a ducimus, quae impedit aliquam neque sint quidem culpa vero quas laborum saepe numquam recusandae perferendis? Quo, repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore maxime ad deserunt velit quasi autem culpa voluptates in, commodi dignissimos unde, odio possimus corrupti, dolore assumenda maiores repudiandae quod delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam earum ad voluptates ullam saepe, voluptatum id aliquid commodi ducimus odit vero quaerat nulla obcaecati facere quibusdam facilis dolorem aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolor quia nihil suscipit omnis consequuntur distinctio et nobis molestias labore iure ab ea reiciendis cupiditate, quae nam officiis quam corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi nobis illo quia iste ut voluptatibus voluptatem libero ab ducimus delectus, mollitia sit expedita debitis tenetur aliquam est? Minima, optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis facilis atque excepturi eos sequi id temporibus veniam odio! Tempora debitis doloremque temporibus corporis est fugit ut fuga aut molestias.</p>
+                    <aside>
+                        <p>Artigo de autoria de <strong>Lorem Ipsum de Souza e Silva</strong>. A reprodução deste conteúdo sem a devida autorização pode acarretar em medidas legais cabíveis.</p>
+                    </aside>
+                </article>
+            </section>
+        </main>
+
+        <footer> <!-- Rodapé -->
+            <p>2026 Curso &#169</p>
+        </footer>
+</body>
+</html>
